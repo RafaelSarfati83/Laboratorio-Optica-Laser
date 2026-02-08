@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio y Óptica Láser | Bogotá</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="container nav-flex">
+            <div class="logo">
+                <img src="img/Logo-nombre-pag.png" alt="Óptica Láser Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Colección</a></li>
+                <li><a href="#contacto" class="btn-nav">Agendar Cita</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero container">
+            <div class="hero-content" data-aos="fade-right">
+                <h1>Salud visual para toda la familia</h1>
+                <p>Tecnología láser y entregas rápidas con las mejores monturas de Bogotá.</p>
+                <div class="hero-btns">
+                    <a href="#contacto" class="btn-primary">Ver Ubicación</a>
+                    <a href="https://wa.me/573000000000" class="btn-secondary"><i class="fab fa-whatsapp"></i> Chat</a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="zoom-in">
+                <img src="img/Publicidad_promociones_entregas.png" alt="Promociones">
+            </div>
+        </section>
+
+        <section id="catalogo" class="catalog-section container" data-aos="fade-up">
+            <h2 class="section-title">Nuestra Colección</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/Lentes_muchos.jpg" alt="Lentes 1"></div>
+                    <div class="swiper-slide"><img src="img/Lente_negros.jpg" alt="Lentes 2"></div>
+                    <div class="swiper-slide"><img src="img/Lentes_azul.jpg" alt="Lentes 3"></div>
+                    <div class="swiper-slide"><img src="img/Lentes_amarillos.jpg" alt="Lentes 4"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="stats-section container" data-aos="fade-up">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <button id="like-btn" class="interact-icon"><i class="fas fa-thumbs-up"></i></button>
+                    <h3 id="like-count">0</h3>
+                    <p>Likes en Redes</p>
+                </div>
+                <div class="stat-card">
+                    <div class="interact-icon no-btn"><i class="fas fa-user-check"></i></div>
+                    <h3 id="satisfaction-count">98%</h3>
+                    <p>Satisfacción</p>
+                </div>
+                <div class="stat-card">
+                    <div class="interact-icon no-btn"><i class="fas fa-eye"></i></div>
+                    <h3 id="exams-count">0</h3>
+                    <p>Exámenes Realizados</p>
+                </div>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="likesChart"></canvas>
+            </div>
+        </section>
+
+        <section id="contacto" class="booking-section container">
+            <div class="booking-card" data-aos="flip-up">
+                <div class="booking-header">
+                    <h2>Reserva tu cita</h2>
+                    <p>Carrera 12 #18-66, Local 106 - Bogotá</p>
+                </div>
+                <form id="appointmentForm" class="grid-form" action="https://formspree.io/f/xlgbkkng" method="POST">
+                    <input type="text" name="Nombre" placeholder="Tu nombre completo" required>
+                    <select name="Servicio" required>
+                        <option value="">¿Qué necesitas?</option>
+                        <option value="Optometria">Optometría</option>
+                        <option value="Lentes">Nuevos Lentes</option>
+                    </select>
+                    <input type="date" name="Fecha" required>
+                    <button type="submit" class="btn-submit">Confirmar Cita</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>Visítanos en la Carrera 12 #18-66, Local 106 (Al fondo del pasaje comercial). Bogotá, Colombia. <br>Creado por <strong>Rafael Sarfati</strong></p>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
